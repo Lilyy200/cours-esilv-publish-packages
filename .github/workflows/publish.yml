@@ -23,8 +23,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ lilyy200 }}
-          password: ${{ secrets.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 }}
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build container
         uses: docker/build-push-action@v5
         with:
